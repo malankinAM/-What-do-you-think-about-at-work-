@@ -1,0 +1,63 @@
+#canvas {
+            width: 600px;
+            margin: 10% auto;
+            position: relative;
+          }
+          
+          img {
+            position: absolute;
+          }
+          
+          #bg {
+            z-index: 0;
+          }
+          
+          #fore {
+            z-index: 1;
+          }
+          
+          #arm {
+            z-index: 3;
+            left: 462px;
+            top: 240px;
+          }
+          
+          #eyeL {
+            left: 272px;
+            top: 225px;
+          }
+          
+          #eyeR {
+            left: 362px;
+            top: 215px;
+          }
+          
+          #bomb {
+            left: 298px;
+            top: 224px;
+          }
+          
+          #bombB {
+            left: 376px;
+            top: 225px;
+          }
+          
+          #mon {
+            left: 282px;
+            top: 226px;
+          }
+          
+          #monB {
+            left: 356px;
+            top: 226px;
+          }
+          
+          #sex {
+            left: 288px;
+            top: 226px;
+          }
+          
+          #sexB {
+            left: 366px;
+            top: 226px;
+          }

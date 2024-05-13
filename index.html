@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="canvas">
+        <img id="bg" src="./1.jpg">
+        <img id="fore" src="./2.jpg">
+        <img id="arm" src="./3.jpg">
+        <img id="eyeL" src="./4.png">
+        <img id="bomb" src="./5.jpg">
+        <img id="mon" src="./6.png">
+        <img id="sex" src="./7.png">
+        
+        <img id="eyeR" src="./8.png">
+        <img id="bombB" src="./5.jpg">
+        <img id="monB" src="./6.png">
+        <img id="sexB" src="./9.png">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+       $(document).ready(function() {
+  
+  var $arm = $("#arm"),
+      $eyeL = $("#eyeL"),
+      $bomb = $("#bomb"),
+      $bombB = $("#bombB"),
+      $mon = $("#mon"),
+      $monB = $("#monB"),
+      $sex = $("#sex"),
+      $sexB = $("#sexB"),
+      $eyeR = $("#eyeR"),
+      tl;
+  
+  
+  TweenLite.set($arm, {transformOrigin:"100% 0%", rotation:-10});
+  TweenMax.to($arm, 0.1, {rotation:5, ease:Circ.easeInOut, repeat:-1, yoyo:true});
+  
+  var tl = new TimelineLite({onComplete:function() {
+    this.restart();
+  }});
+  
+  tl.to($eyeL, 0.5, {top:"-=78", repeat:1, yoyo:true, ease:Elastic.easeInOut}, "eyes")
+  tl.to($bomb, 0.5, {top:"-=160", repeat:1, yoyo:true, ease:Elastic.easeInOut}, "bomb")
+  tl.to($mon, 0.5, {top:"-=86", repeat:1, yoyo:true, ease:Elastic.easeInOut}, "money")
+  tl.to($sex, 0.5, {top:"-=148", repeat:1, yoyo:true, ease:Elastic.easeInOut}, "sex")
+  tl.to($eyeR, 0.5, {top:"-=74", repeat:1, yoyo:true, ease:Elastic.easeInOut}, "eyes")
+  tl.to($bombB, 0.5, {top:"-=170", repeat:1, yoyo:true, ease:Elastic.easeInOut}, "bomb")
+  tl.to($monB, 0.5, {top:"-=86", repeat:1, yoyo:true, ease:Elastic.easeInOut}, "money")
+  tl.to($sexB, 0.5, {top:"-=140", repeat:1, yoyo:true, ease:Elastic.easeInOut}, "sex")
+  
+});
+    </script>
+</body>
+</html>
